@@ -11,9 +11,11 @@ use Laravel\Jetstream\HasProfilePhoto;
 use Laravel\Sanctum\HasApiTokens;
 
 // 이메일 인증 해야 되도록 설정 implements MustVerifyEmail
-class User extends Authenticatable implements MustVerifyEmail
+//implements MustVerifyEmail
+class User extends Authenticatable
 {
-    use HasApiTokens;
+
+    use HasApiTokens; // api 토큰 인증 처리
     use HasFactory;
     use HasProfilePhoto;
     use Notifiable;
